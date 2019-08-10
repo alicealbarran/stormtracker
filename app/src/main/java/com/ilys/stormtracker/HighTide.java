@@ -1,5 +1,7 @@
 package com.ilys.stormtracker;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +15,7 @@ public class HighTide extends Fragment {
 
     TextView stormCountView, manaCountView, highTideCountView;
 
+    View changeSelectorView;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -52,6 +55,9 @@ public class HighTide extends Fragment {
         View highTideButtonMinusView = root.findViewById(R.id.highTideButtonMinus);
         highTideButtonMinusView.setOnClickListener(v -> adjustHighTideCount(-1));
 
+        changeSelectorView = root.findViewById(R.id.changeSelectorFragment);
+        changeSelectorView.setVisibility(View.GONE);
+
 
 
 
@@ -64,6 +70,18 @@ public class HighTide extends Fragment {
 
     public void stormButtonClicked()
     {
+        ChangeSelector stormManaCost = new ChangeSelector();
+        stormManaCost.setTargetFragment(HighTide.this, 001);
+
+        changeSelectorView.setVisibility(View.VISIBLE);
+
+
+        getActivity()
+                .getSupportFragmentManager()
+                .beginTransaction()
+                .add(R.id.changeSelectorFragment, stormManaCost)
+                .commit();
+
         adjustStormCount(1);
     }
 
@@ -99,5 +117,14 @@ public class HighTide extends Fragment {
         int count = Integer.parseInt(s);
         count+=i;
         manaCountView.setText(""+count);
+    }
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data)
+    {
+        if(requestCode == 001 && resultCode== Activity.RESULT_OK)
+        {
+            changeSelectorView.setVisibility(View.GONE);
+        }
     }
 }
