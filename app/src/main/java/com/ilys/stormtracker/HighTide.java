@@ -124,6 +124,8 @@ public class HighTide extends Fragment {
     {
         if(requestCode == 001 && resultCode== Activity.RESULT_OK)
         {
+            int change = data.getIntExtra("CHANGE",0);
+            adjustManaCount(change);
             changeSelectorView.setVisibility(View.GONE);
         }
     }

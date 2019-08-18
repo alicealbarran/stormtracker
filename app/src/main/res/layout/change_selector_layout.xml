@@ -2,11 +2,105 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/one"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="1"/>
+        android:columnCount="3"
+        android:rowCount="3"
 
+        android:alignmentMode="alignBounds">
+
+
+        <Button
+            android:id="@+id/change8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-8" />
+
+        <Button
+            android:id="@+id/change1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-1" />
+
+        <Button
+            android:id="@+id/change2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-2" />
+
+        <Button
+            android:id="@+id/change7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-7" />
+
+        <Button
+            android:id="@+id/change0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/change3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="-3" />
+
+        <Button
+            android:id="@+id/change6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="-6" />
+
+        <Button
+            android:id="@+id/change5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_gravity="fill"
+            android:text="-5" />
+
+        <Button
+            android:id="@+id/change4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill"
+
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="-4" />
+
+
+    </GridLayout>
 
 </FrameLayout>

@@ -22,8 +22,32 @@ public class ChangeSelector extends Fragment{
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.change_selector_layout, container, false);
 
-        View manaCost = root.findViewById(R.id.one);
-        manaCost.setOnClickListener(v -> clicked(1));
+        View changeOne = root.findViewById(R.id.change1);
+        changeOne.setOnClickListener(v -> clicked(-1));
+
+        View changeTwo= root.findViewById(R.id.change2);
+        changeTwo.setOnClickListener(v -> clicked(-2));
+
+        View changeThree = root.findViewById(R.id.change3);
+        changeThree.setOnClickListener(v -> clicked(-3));
+
+        View changeFour = root.findViewById(R.id.change4);
+        changeFour.setOnClickListener(v -> clicked(-4));
+
+        View changeFive = root.findViewById(R.id.change5);
+        changeFive.setOnClickListener(v -> clicked(-5));
+
+        View changeSix= root.findViewById(R.id.change6);
+        changeSix.setOnClickListener(v -> clicked(-6));
+
+        View changeSeven = root.findViewById(R.id.change7);
+        changeSeven.setOnClickListener(v -> clicked(-7));
+
+        View changeEight= root.findViewById(R.id.change8);
+        changeEight.setOnClickListener(v -> clicked(-8));
+
+        View changeZero= root.findViewById(R.id.change0);
+        changeZero.setOnClickListener(v -> clicked(0));
 
         return root;
     }
